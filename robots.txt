@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hushlantern.com/sitemap.xml
