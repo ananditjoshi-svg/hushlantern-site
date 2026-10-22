@@ -41,15 +41,13 @@
       lang: (document.documentElement.lang || "en").slice(0, 5),
       consent: true
     };
+    // Older "anon" keys are JWTs and also go in Authorization; newer sb_publishable_ keys go in apikey only.
+    var headers = { "apikey": cfg.supabaseAnonKey, "Content-Type": "application/json", "Prefer": "return=minimal" };
+    if (/^eyJ/.test(cfg.supabaseAnonKey)) headers.Authorization = "Bearer " + cfg.supabaseAnonKey;
     btn.disabled = true; btn.textContent = "Joining…"; say("");
     fetch(cfg.supabaseUrl.replace(/\/$/, "") + "/rest/v1/waitlist", {
       method: "POST",
-      headers: {
-        "apikey": cfg.supabaseAnonKey,
-        "Authorization": "Bearer " + cfg.supabaseAnonKey,
-        "Content-Type": "application/json",
-        "Prefer": "return=minimal"
-      },
+      headers: headers,
       body: JSON.stringify(body)
     }).then(function(r){
       // 201 = added; 409 = already on the list (same friendly answer, so the list can't be probed)
