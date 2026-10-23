@@ -1,0 +1,108 @@
+{
+  "case": {
+    "brief": "Ms. Okafor's roll of gold star stickers vanished from her desk during recess. Gold stars are for finishing your reading book. Who took them?",
+    "culprit": "lily",
+    "det": "pip",
+    "examine": "Pip looks at",
+    "font": "'Baloo 2','Comic Sans MS',sans-serif",
+    "hero": "Pip",
+    "herrings": {
+      "backing": "Someone used stickers in the nook. Who has the roll now?",
+      "lilysays": "That's what Lily says. Is there anything that shows otherwise?",
+      "stars": "Lots of new stars is suspicious, but where did the roll go?",
+      "time": "Good, it happened at recess. Now find the roll!"
+    },
+    "hints": [
+      "Who suddenly has lots of new stars?",
+      "Where do kids keep their stuff? Check the cubbies."
+    ],
+    "meta": "Ages 8+ · find 1 clue",
+    "minAge": 8,
+    "need": 1,
+    "people": [
+      {
+        "clue": {
+          "d": "The stars went missing during recess.",
+          "id": "time",
+          "t": "Gone at recess"
+        },
+        "id": "okafor",
+        "name": "Ms. Okafor",
+        "role": "Teacher",
+        "says": "The roll was on my desk before recess. After recess, it was gone."
+      },
+      {
+        "id": "theo",
+        "name": "Theo",
+        "role": "Classmate",
+        "says": "I was outside playing tag the whole recess. Ask anyone!"
+      },
+      {
+        "clue": {
+          "d": "Says she earned all her stars.",
+          "id": "lilysays",
+          "t": "Lily's story"
+        },
+        "id": "lily",
+        "name": "Lily",
+        "role": "Classmate",
+        "says": "I didn't take them! I earned all my stars. (She looks down at her shoes.)"
+      }
+    ],
+    "places": [
+      {
+        "id": "board",
+        "name": "Whiteboard",
+        "text": "Today's goal: finish your reading book to earn a gold star!"
+      },
+      {
+        "clue": {
+          "d": "Lily's name suddenly has five gold stars.",
+          "id": "stars",
+          "t": "Five new stars"
+        },
+        "id": "chart",
+        "name": "Helper chart",
+        "text": "Someone stuck five shiny new gold stars next to Monday: Lily."
+      },
+      {
+        "clue": {
+          "d": "The missing roll is hidden in Lily's cubby.",
+          "id": "roll",
+          "t": "Star roll in Lily's cubby"
+        },
+        "id": "cubbies",
+        "name": "Cubbies",
+        "text": "Lily's cubby: the gold star roll, almost empty, tucked under her art folder."
+      },
+      {
+        "clue": {
+          "d": "Someone peeled stickers in the reading nook.",
+          "id": "backing",
+          "t": "Sticker backings"
+        },
+        "id": "beanbag",
+        "name": "Reading nook",
+        "text": "Little star-shaped sticker backings are stuck to the beanbag."
+      },
+      {
+        "id": "window",
+        "name": "Window",
+        "text": "Closed and locked. The stars didn't fly away!"
+      }
+    ],
+    "proof": [
+      "roll"
+    ],
+    "retorts": [
+      "It wasn't me! Look at the clues again.",
+      "Hmm, that clue doesn't prove it. Try another one!"
+    ],
+    "scene": "nibbles",
+    "title": "The Missing Gold Stars",
+    "world": "Maple Street School",
+    "wrap": "Lily really wanted a gold star, so she took the roll at recess and gave herself five. She gave it back and said sorry, then finished her reading book and earned a real one."
+  },
+  "date": "2026-10-19",
+  "tier": "junior"
+}

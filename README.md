@@ -1,6 +1,6 @@
 # hushlantern.com
 
-The Hushlantern Games website: studio intro, Inspector Wren's Casebook, the parents' guide, a privacy notice and a launch waitlist stored in Supabase. It's a plain static site with no build step, made for GitHub Pages.
+The Hushlantern Games website: studio intro, Inspector Wren's Casebook (playable at /play), the parents' guide, a privacy notice, a launch waitlist, cookie-free analytics and a private studio dashboard at /admin. Everything is static files on GitHub Pages, with Supabase for accounts and data.
 
 ```
 index.html          home: game, worlds, how it plays, learning, parents, studio, waitlist
@@ -10,8 +10,24 @@ privacy.html        privacy notice (website + waitlist)
 CNAME               tells GitHub Pages the domain is hushlantern.com
 assets/config.js    ← the only file you edit: Supabase URL + key, and later the game link
 assets/             styles, script, images, teaser video
+play/               the game (index.html, game.js, Supabase adapter, nightly cases in play/daily/)
+admin/              private studio dashboard (admins only)
 supabase/waitlist.sql   database setup for the waitlist (run once)
+supabase/game.sql       database setup for the game, analytics and dashboard (run once, safe to re-run)
 ```
+
+## Game + analytics setup in Supabase (one time)
+
+1. **SQL Editor → New query →** paste all of `supabase/game.sql` → **Run**. It also adds `ananditjoshi@gmail.com` as the dashboard admin. To add another admin: `insert into public.admins (email) values ('someone@example.com');`
+2. **Authentication → URL Configuration:**
+   - Site URL: `https://hushlantern.com`
+   - Redirect URLs: add `https://hushlantern.com/play/` and `https://hushlantern.com/admin/`
+3. **Authentication → Emails → SMTP Settings: set up your own email sender before inviting families.** Supabase's built-in sender only delivers to your own team's addresses and only a few emails an hour. A free Resend account (resend.com) works well: verify hushlantern.com there (it gives you DNS records to add in GoDaddy), then paste its SMTP details here with sender `hello@hushlantern.com`.
+4. Optional but recommended: **Database → Extensions →** enable `pg_cron`, then in the SQL Editor run
+   `select cron.schedule('purge-old-events', '15 4 * * *', 'select public.purge_old_events()');`
+   so measurement records older than 13 months and finished multiplayer tables are deleted automatically, as the privacy notice promises.
+
+The dashboard is at **hushlantern.com/admin**: sign in to the game once with your admin email, then use the same email there.
 
 ## 1. Set up the waitlist in Supabase (about 10 minutes)
 

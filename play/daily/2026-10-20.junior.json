@@ -1,0 +1,102 @@
+{
+  "case": {
+    "brief": "The big bag of marshmallows for tonight's campfire vanished from the Red cabin porch. No marshmallows means no s'mores! Who took them?",
+    "culprit": "priya",
+    "det": "scout",
+    "examine": "Scout checks out",
+    "font": "'Bree Serif',Georgia,serif",
+    "hero": "Scout",
+    "herrings": {
+      "absent": "So Priya skipped swim. But where did the marshmallows go?",
+      "priyasays": "That's what Priya says. Does anything show otherwise?",
+      "raccoon": "The raccoon only found banana peels. Keep looking!"
+    },
+    "hints": [
+      "Someone wasn't where they said they were.",
+      "Marshmallows are sticky. Check the lost and found."
+    ],
+    "meta": "Ages 8+ · find 1 clue",
+    "minAge": 8,
+    "need": 1,
+    "people": [
+      {
+        "clue": {
+          "d": "Says she was at swim lessons.",
+          "id": "priyasays",
+          "t": "Priya's story"
+        },
+        "id": "priya",
+        "name": "Priya",
+        "role": "Camper",
+        "says": "I was at swim lessons all afternoon!"
+      },
+      {
+        "id": "dana",
+        "name": "Coach Dana",
+        "role": "Counselor",
+        "says": "I saw the marshmallow bag on the porch at three o'clock, safe and sound."
+      },
+      {
+        "id": "jonah",
+        "name": "Jonah",
+        "role": "Camper",
+        "says": "I was at swim the whole time. Priya wasn't there, though."
+      }
+    ],
+    "places": [
+      {
+        "id": "reddoor",
+        "name": "Red cabin",
+        "text": "The marshmallows sat on the porch by the door. Now there are only a few powdery crumbs."
+      },
+      {
+        "clue": {
+          "d": "A raccoon visited, but only found banana peels.",
+          "id": "raccoon",
+          "t": "Raccoon tracks"
+        },
+        "id": "tracks",
+        "name": "Paw prints",
+        "text": "Raccoon tracks lead to the trash can, but the can only has banana peels inside."
+      },
+      {
+        "clue": {
+          "d": "Priya wasn't at swim lessons.",
+          "id": "absent",
+          "t": "Priya skipped swim"
+        },
+        "id": "clipboard",
+        "name": "Swim sign-in",
+        "text": "Swim lesson, 3 to 4 pm. Jonah ✓. Priya: absent."
+      },
+      {
+        "clue": {
+          "d": "Priya's sweatshirt pocket is full of marshmallow fluff.",
+          "id": "fluff",
+          "t": "Fluffy pocket"
+        },
+        "id": "lostfound",
+        "name": "Lost & found",
+        "text": "A red sweatshirt labeled PRIYA. The pocket is sticky with marshmallow fluff!"
+      },
+      {
+        "id": "flagpole",
+        "name": "Flagpole",
+        "text": "The camp flag flaps in the breeze. No marshmallows up there."
+      }
+    ],
+    "proof": [
+      "fluff"
+    ],
+    "retorts": [
+      "It wasn't me! Look at the clues again.",
+      "Hmm, that clue doesn't prove it. Try another one!"
+    ],
+    "scene": "flag",
+    "title": "The Marshmallow Mystery",
+    "world": "Camp Pinecrest",
+    "wrap": "Priya skipped swim because she was nervous about the deep end, and snacked on marshmallows instead. Coach Dana found her a swim buddy, and the whole camp shared the last bag at the campfire."
+  },
+  "date": "2026-10-20",
+  "tier": "junior"
+}

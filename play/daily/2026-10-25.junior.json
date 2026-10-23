@@ -1,0 +1,113 @@
+{
+  "case": {
+    "brief": "Before recess, Nibbles the class hamster was in his cage. After recess, the cage door was open and Nibbles was gone! Everyone looked, and Lily found him fast asleep, safe and sound, in the green beanbag. Hooray! But Ms. Okafor still wants to know: who left the cage door open?",
+    "culprit": "theo",
+    "det": "pip",
+    "examine": "Pip looks at",
+    "font": "'Baloo 2','Comic Sans MS',sans-serif",
+    "hero": "Pip",
+    "herrings": {
+      "fed": "This shows the helper jobs were started, but not who forgot the last one.",
+      "helper": "Theo is the helper today, but being the helper does not prove he forgot. Can you find something that shows what he did?",
+      "seed": "Lily was at the cage too, but she pushed the seed through the bars. The door is the helper's job.",
+      "shells": "These show Nibbles took a snack with him. They do not tell us who left the door open."
+    },
+    "hints": [
+      "Ms. Okafor says the helper has a list of jobs. Where would that list be?",
+      "Look at the paper sticking out of a cubby. Which job has no check?"
+    ],
+    "meta": "Ages 8+ · find 1 clue",
+    "minAge": 8,
+    "need": 1,
+    "people": [
+      {
+        "id": "okafor",
+        "name": "Ms. Okafor",
+        "role": "Teacher",
+        "says": "Only the Hamster Helper may open the cage door. The helper does three jobs from the list, and the last job is always to close the door. I was outside with everyone at recess, and the room was empty. So the door was left open before recess."
+      },
+      {
+        "id": "theo",
+        "name": "Theo",
+        "role": "Classmate",
+        "says": "I'm the Hamster Helper today! I gave Nibbles food and water. Then the recess bell rang and I ran outside super fast. I'm pretty sure I did everything. Pretty sure."
+      },
+      {
+        "clue": {
+          "d": "Lily pushed a seed through the bars before recess. She says she never opened the door.",
+          "id": "seed",
+          "t": "Lily gave a seed"
+        },
+        "id": "lily",
+        "name": "Lily",
+        "role": "Classmate",
+        "says": "I love Nibbles! Before recess I gave him a sunflower seed. I just pushed it through the bars. I never open the door, because that's only for the helper. I'm so glad I found him in the beanbag!"
+      }
+    ],
+    "places": [
+      {
+        "clue": {
+          "d": "Nibbles got fresh food and water before recess. But the door was left open.",
+          "id": "fed",
+          "t": "Food and water are done"
+        },
+        "id": "cage",
+        "name": "Hamster cage",
+        "text": "The wire cage sits on the table. The little door is wide open. The food bowl is full and the water bottle is fresh. Someone did the feeding jobs today."
+      },
+      {
+        "clue": {
+          "d": "Today is Tuesday, so Theo is the Hamster Helper.",
+          "id": "helper",
+          "t": "Theo is today's helper"
+        },
+        "id": "chart",
+        "name": "Hamster Helpers chart",
+        "text": "The chart on the wall says: Monday Lily, Tuesday Theo, Wednesday Sam. The whiteboard says today is Tuesday."
+      },
+      {
+        "clue": {
+          "d": "Theo checked Food and Water, but not Close the cage door.",
+          "id": "list",
+          "t": "Theo's helper list"
+        },
+        "id": "cubbies",
+        "name": "Cubbies",
+        "text": "Six colored bins sit in a row. A paper sticks out of Theo's bin. It is the Hamster Helper list: 1. Food (checked). 2. Water (checked). 3. Close the cage door (no check!). At the bottom it says Theo, Tuesday."
+      },
+      {
+        "clue": {
+          "d": "Nibbles brought his own snack to his hiding spot.",
+          "id": "shells",
+          "t": "Seed shells in the beanbag"
+        },
+        "id": "beanbag",
+        "name": "Green beanbag",
+        "text": "This is where Nibbles was napping. There are a few sunflower seed shells in a little pile. Nibbles must have carried them in his cheeks!"
+      },
+      {
+        "id": "window",
+        "name": "Window",
+        "text": "The window is closed tight. It is sunny outside. Nobody came in this way, and Nibbles did not get out this way."
+      },
+      {
+        "id": "board",
+        "name": "Whiteboard",
+        "text": "The board says: Tuesday. Recess 10:30. Lunch 12:00. Under that, someone drew a tiny hamster with a smile."
+      }
+    ],
+    "proof": [
+      "list"
+    ],
+    "retorts": [
+      "Not me! Look at the clues again.",
+      "Hmm, that clue doesn't show who left the door open. Try another one!"
+    ],
+    "scene": "nibbles",
+    "title": "The Open Cage Door",
+    "world": "Maple Street School",
+    "wrap": "Theo did the food and the water. Then the recess bell rang, and he ran outside before the last job: close the cage door. Nibbles took a seed and went for a cozy nap in the beanbag. Theo said sorry to Nibbles and to the class. Now he reads his whole list out loud before he leaves the cage. And Nibbles got an extra seed from Lily."
+  },
+  "date": "2026-10-25",
+  "tier": "junior"
+}

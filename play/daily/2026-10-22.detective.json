@@ -1,0 +1,137 @@
+{
+  "case": {
+    "brief": "The Battle of the Bands starts at 5. At 3:30, Maya plugged her band's USB stick, with all of Static Bloom's backing tracks, into the black amp for sound check. She stepped out for water at 3:35. When she came back at 4:00, the stick was gone. Without it, Static Bloom can't play. Someone came into the music room while it was empty. Who took the stick?",
+    "culprit": "kai",
+    "det": "rio",
+    "examine": "Rio checks",
+    "font": "'Rubik',system-ui,sans-serif",
+    "hero": "Rio",
+    "herrings": {
+      "kaistory": "A story is only proof if something backs it up or breaks it. Check the sign-in sheet.",
+      "lineup": "A reason to want Static Bloom out is motive, not proof. Who was actually there?",
+      "loses": "Maya has lost things before, but she didn't sign in while the stick vanished, and the room had a visitor.",
+      "port": "It shows the stick was taken, not who took it.",
+      "prize": "Every band wants the prize, Maya's included. That points at no one in particular.",
+      "redtag": "Useful to know, but on its own it proves nothing. Where did that tag end up?"
+    },
+    "hints": [
+      "The room was empty from 3:35 to 4:00. Who wrote their name down in that window?",
+      "Maya tied something to her stick. Look for where it ended up."
+    ],
+    "meta": "Ages 12+ · prove it with 2 clues",
+    "minAge": 12,
+    "need": 2,
+    "people": [
+      {
+        "clue": {
+          "d": "Maya's stick had a red tag tied to it.",
+          "id": "redtag",
+          "t": "Maya's red tag"
+        },
+        "id": "maya",
+        "name": "Maya",
+        "role": "Static Bloom singer",
+        "says": "I tied a red tag on the stick so I'd never lose it. I was gone twenty-five minutes, tops. When I came back, the amp was on but the music was just gone."
+      },
+      {
+        "clue": {
+          "d": "Kai says he hasn't been in the music room since lunch.",
+          "id": "kaistory",
+          "t": "Kai's story"
+        },
+        "id": "kai",
+        "name": "Kai",
+        "role": "Low Tide Radio guitarist",
+        "says": "I haven't been in the music room since lunch. I've been in the art room fixing our banner all afternoon. Ask anyone."
+      },
+      {
+        "clue": {
+          "d": "Mr. Duarte says Maya has lost things before.",
+          "id": "loses",
+          "t": "Maya loses things"
+        },
+        "id": "duarte",
+        "name": "Mr. Duarte",
+        "role": "Music teacher",
+        "says": "I was at a staff meeting from 3:15 to 4:15, so I left the room unlocked. Maya, I hate to say it, but you do lose things. Remember the tuner last month?"
+      }
+    ],
+    "places": [
+      {
+        "clue": {
+          "d": "Kai was in the music room from 3:40 to 3:50, while it was empty.",
+          "id": "sheet",
+          "t": "Kai signed in at 3:40"
+        },
+        "id": "signin",
+        "name": "Sign-in clipboard",
+        "text": "Every student must sign in and out of the music room. Maya: in 3:20, out 3:35, in 4:00. Kai: in 3:40, out 3:50. No one else signed in after lunch."
+      },
+      {
+        "clue": {
+          "d": "The stick was pulled out of the amp.",
+          "id": "port",
+          "t": "Empty USB port"
+        },
+        "id": "amp",
+        "name": "Black amp",
+        "text": "The amp is still switched on, its little red light glowing. The USB port on the front is empty. The tracks were playing from here during sound check."
+      },
+      {
+        "clue": {
+          "d": "A purple LTR pick was dropped right by the amp.",
+          "id": "ltrpick",
+          "t": "Low Tide Radio pick"
+        },
+        "id": "pick",
+        "name": "Guitar pick",
+        "text": "A purple guitar pick lies on the floor right in front of the amp. Printed on it in tiny white letters: LTR. That stands for Low Tide Radio, Kai's band."
+      },
+      {
+        "clue": {
+          "d": "Static Bloom opens the show. Kai's band is second.",
+          "id": "lineup",
+          "t": "Static Bloom plays first"
+        },
+        "id": "board",
+        "name": "Line-up whiteboard",
+        "text": "BATTLE LINE-UP: 1. Static Bloom (Maya). 2. Low Tide Radio (Kai). 3. The Hallway Echoes. Under it, in Mr. Duarte's writing: No band may swap slots."
+      },
+      {
+        "clue": {
+          "d": "The red tag from Static Bloom's stick is in Kai's case pocket.",
+          "id": "tag",
+          "t": "SB TRACKS tag"
+        },
+        "id": "case",
+        "name": "Black guitar case",
+        "text": "A black guitar case with a big purple LTR sticker and a luggage label reading KAI sits by the door. In the front pocket is a small red paper tag on a string. Written on it in marker: SB TRACKS."
+      },
+      {
+        "clue": {
+          "d": "The winner gets a day in a recording studio.",
+          "id": "prize",
+          "t": "Studio prize"
+        },
+        "id": "poster",
+        "name": "Contest poster",
+        "text": "A bright yellow BATTLE OF THE BANDS poster. First prize: a free day in a real recording studio. Every band in school wants it."
+      }
+    ],
+    "proof": [
+      "sheet",
+      "ltrpick",
+      "tag"
+    ],
+    "retorts": [
+      "Whoa, Rio. You're way off. I wasn't even there.",
+      "That's it? That could mean anything. Come back with real proof."
+    ],
+    "scene": "band",
+    "title": "The Silent Sound Check",
+    "world": "Westbrook High",
+    "wrap": "Low Tide Radio's drummer was stuck out of town, and Kai panicked. He hoped that if Static Bloom couldn't open, Mr. Duarte would push the whole show back a week. He slipped in at 3:40, pulled the stick, and dropped his pick doing it. Kai handed the stick back and apologized to Maya. Mr. Duarte let the show go on, and Maya offered to play drums for Low Tide Radio's set."
+  },
+  "date": "2026-10-22",
+  "tier": "detective"
+}

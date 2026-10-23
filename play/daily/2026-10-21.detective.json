@@ -1,0 +1,119 @@
+{
+  "case": {
+    "brief": "Last night the Kell Island lamp went dark from 11:50 pm to 12:20 am. In that half hour, Harlan's fishing boat ran onto the rocks. Nobody was hurt, but his whole catch was lost. The keeper slept through it. Someone crossed to the island and switched the lamp off.",
+    "culprit": "bram",
+    "det": "wren_noir",
+    "examine": "Wren examines",
+    "font": "'Special Elite','Courier New',monospace",
+    "hero": "Inspector Wren",
+    "herrings": {
+      "bramsays": "That's his story. What contradicts it?",
+      "rival": "A grudge is a motive, not proof.",
+      "tides": "That tells you when someone could cross. Who did?"
+    },
+    "hints": [
+      "Only someone on foot at low tide could reach the lamp. Who was out then?",
+      "Check whose boots got wet last night."
+    ],
+    "meta": "Ages 12+ · prove it with 2 clues",
+    "minAge": 12,
+    "need": 2,
+    "people": [
+      {
+        "clue": {
+          "d": "Bram left the Anchor around 11:30 pm.",
+          "id": "left",
+          "t": "Bram left at 11:30"
+        },
+        "id": "cass",
+        "name": "Cass",
+        "role": "Keeper's assistant",
+        "says": "Edda and I were at the Anchor till close. Bram left early, about half eleven, in a real hurry."
+      },
+      {
+        "clue": {
+          "d": "Says he was in bed by eleven.",
+          "id": "bramsays",
+          "t": "Bram's story"
+        },
+        "id": "bram",
+        "name": "Bram",
+        "role": "Fisherman",
+        "says": "I was in bed by eleven. Why would I go out in that cold?"
+      },
+      {
+        "clue": {
+          "d": "Harlan beat Bram in a contest.",
+          "id": "rival",
+          "t": "The rivalry"
+        },
+        "id": "edda",
+        "name": "Edda",
+        "role": "Harbor clerk",
+        "says": "Harlan beat Bram at the Harvest Catch contest last week. Bram didn't take it well."
+      }
+    ],
+    "places": [
+      {
+        "clue": {
+          "d": "The causeway was open 10:45 pm to 12:15 am.",
+          "id": "tides",
+          "t": "Tide window"
+        },
+        "id": "tide",
+        "name": "Tide table",
+        "text": "Low tide 11:30 pm. The causeway was walkable from 10:45 pm to 12:15 am."
+      },
+      {
+        "id": "stairs",
+        "name": "Lighthouse stairs",
+        "text": "Wet sand on the steps all the way to the lamp room. Whoever did this walked across."
+      },
+      {
+        "clue": {
+          "d": "Big boots crossed and returned near midnight.",
+          "id": "bigprints",
+          "t": "Size-11 prints"
+        },
+        "id": "prints",
+        "name": "Causeway prints",
+        "text": "One set of big boot prints, about size 11, heading to the island. The incoming tide has half washed the return trip away, so they came back right at the end of low tide."
+      },
+      {
+        "id": "rack",
+        "name": "Keeper's boot rack",
+        "text": "All of the keeper's boots are bone dry. He really did sleep through it."
+      },
+      {
+        "id": "pub",
+        "name": "The Anchor",
+        "text": "The landlord's tab book: Bram, settled 11:25 pm. Cass and Edda, open until closing at 1 am."
+      },
+      {
+        "clue": {
+          "d": "Bram's size-11 boots are wet to the knee.",
+          "id": "boots",
+          "t": "Bram's soaked boots"
+        },
+        "id": "shed",
+        "name": "Bram's shed",
+        "text": "Bram's boots, size 11, soaked to the knee and crusted with sand and wrack."
+      }
+    ],
+    "proof": [
+      "boots",
+      "bigprints",
+      "left"
+    ],
+    "retorts": [
+      "That's absurd, Inspector. You've got nothing on me.",
+      "Is that all you've got? My lawyer will love this."
+    ],
+    "scene": "lighthouse",
+    "title": "The Dark Lamp",
+    "world": "Classic Noir",
+    "wrap": "Bram left the Anchor early, crossed the causeway at low tide and switched off the lamp so his rival would hit the rocks. His soaked boots and the size-11 prints gave him away. Nobody was hurt, and Bram is paying Harlan back for every fish."
+  },
+  "date": "2026-10-21",
+  "tier": "detective"
+}

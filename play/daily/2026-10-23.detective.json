@@ -1,0 +1,114 @@
+{
+  "case": {
+    "brief": "At four o'clock, Lady Ashby slipped off her emerald ring to pour tea and set it on her saucer. At five past, she rang for hot water, then stepped out to speak with the gardener. When she returned at twenty past four, the saucer was empty. Only three people were in the house: the cook, the footman and her companion. Who took the emerald ring?",
+    "culprit": "hale",
+    "det": "wren_manor",
+    "examine": "Wren examines",
+    "font": "'IM Fell English',Georgia,serif",
+    "hero": "Inspector Wren",
+    "herrings": {
+      "bell": "Answering the bell put Thomas in the room, but that was his job, and he says the ring was still there. Nothing ties him to the saucer.",
+      "latch": "It tells you the thief was already inside the house. That narrows the field, but it names no one.",
+      "letters": "A story is only her word. It proves nothing until something backs it up or breaks it.",
+      "ticket": "An old ticket from April, for Mrs. Pell's own clock, says nothing about a ring taken today."
+    },
+    "hints": [
+      "The tray was spotless at four. Anything on it now arrived later.",
+      "Who has been dropping small black things all day?"
+    ],
+    "meta": "Ages 12+ · prove it with 2 clues",
+    "minAge": 12,
+    "need": 2,
+    "people": [
+      {
+        "id": "pell",
+        "name": "Mrs. Pell",
+        "role": "Cook",
+        "says": "I laid that tray myself at four o'clock, polished till it shone, not a crumb on it. Then I was in my kitchen with the bread. That pawn ticket? My mother's clock, last April. I bought it back by June, and I'll thank you not to stare at it so."
+      },
+      {
+        "clue": {
+          "d": "Miss Hale's black jet bracelet snapped at breakfast. She keeps the loose beads in her pocket.",
+          "id": "bracelet",
+          "t": "Miss Hale's broken bracelet"
+        },
+        "id": "thomas",
+        "name": "Thomas",
+        "role": "Footman",
+        "says": "The bell rang at five past, so I took up hot water at ten past. The ring was still on the saucer, sir, I saw it shine. I left at once. Earlier I helped Miss Hale gather her beads. Her black jet bracelet snapped at breakfast, and she keeps the loose ones in her pocket."
+      },
+      {
+        "clue": {
+          "d": "Miss Hale says she wrote letters upstairs all afternoon.",
+          "id": "letters",
+          "t": "Hale's letters upstairs"
+        },
+        "id": "hale",
+        "name": "Miss Hale",
+        "role": "Lady Ashby's companion",
+        "says": "I spent the whole afternoon upstairs in my room, writing letters to my family. I did not set foot in the drawing room after luncheon. Lady Ashby's ring? How dreadful. She will be so upset."
+      }
+    ],
+    "places": [
+      {
+        "id": "teacup",
+        "name": "Lady Ashby's teacup",
+        "text": "The cup is half full and still faintly warm. Its saucer is empty. That is where Lady Ashby set her emerald ring before pouring. A faint round mark remains in a drop of spilled tea."
+      },
+      {
+        "clue": {
+          "d": "A small black jet bead lies on the tray, which was laid fresh and spotless at four.",
+          "id": "bead",
+          "t": "A black bead on the tray"
+        },
+        "id": "tray",
+        "name": "Silver tea tray",
+        "text": "The silver tray gleams; Mrs. Pell polished it this very afternoon. Yet beside the saucer lies something that does not belong: a single small black bead, glossy as a drop of ink."
+      },
+      {
+        "clue": {
+          "d": "The window is latched inside; no one came in from the garden.",
+          "id": "latch",
+          "t": "Latched window"
+        },
+        "id": "window",
+        "name": "Garden window",
+        "text": "The window looks out on a bed of purple flowers. The latch is fastened from the inside, and the soft soil below shows no footprints at all."
+      },
+      {
+        "clue": {
+          "d": "An old pawn ticket in Mrs. Pell's name, for a clock, dated last April.",
+          "id": "ticket",
+          "t": "A pawn ticket for Mrs. Pell"
+        },
+        "id": "basket",
+        "name": "Hall basket",
+        "text": "The hall basket holds gloves, a folded newspaper and some old papers. Tucked among them is a pawnbroker's ticket made out to Mrs. Pell, for one mantel clock."
+      },
+      {
+        "clue": {
+          "d": "Thomas went up to the drawing room after the 4:05 bell.",
+          "id": "bell",
+          "t": "Thomas answered the bell"
+        },
+        "id": "bells",
+        "name": "Servants' bell board",
+        "text": "A row of small brass bells, each labeled with a room. Beside the board, Mrs. Pell's slate reads: Drawing room, 4:05, Thomas sent up with hot water."
+      }
+    ],
+    "proof": [
+      "bead",
+      "bracelet"
+    ],
+    "retorts": [
+      "Wrong door, Inspector. Look again.",
+      "A clever guess, Inspector, but a guess is not proof."
+    ],
+    "scene": "tea",
+    "title": "The Empty Saucer",
+    "world": "Victorian Manor",
+    "wrap": "Miss Hale slipped into the drawing room just after Thomas left. Her younger brother's school fees were due, and in a weak moment she pocketed the ring, meaning to sell it. As she reached for the saucer, a loose bead from her broken bracelet fell onto the spotless tray. Faced with it, she returned the ring from her pocket. Lady Ashby was hurt but kind: she kept Miss Hale on and promised to help with the fees, if only she would ask next time."
+  },
+  "date": "2026-10-23",
+  "tier": "detective"
+}

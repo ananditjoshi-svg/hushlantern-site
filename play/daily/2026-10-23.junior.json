@@ -1,0 +1,107 @@
+{
+  "case": {
+    "brief": "It is science fair day at Maple Street School! Mr. Patel, the judge, left the blue prize ribbon on his clipboard stand. He will pick the winner at 3:30. But at 3:15, the ribbon is already pinned at Zara's volcano table! Mr. Patel has not picked anyone yet. Who pinned the ribbon on the volcano table?",
+    "culprit": "leo",
+    "det": "pip",
+    "examine": "Pip looks at",
+    "font": "'Baloo 2','Comic Sans MS',sans-serif",
+    "hero": "Pip",
+    "herrings": {
+      "cleanup": "Leo was busy with clean-up, but that does not show who touched the ribbon. Look for something left with the ribbon.",
+      "wow": "Mr. Patel liked the volcano, but he was at the snack table with Zara. And he says he has not picked a winner yet.",
+      "zaratable": "The ribbon is on Zara's table, but Zara was eating apple slices with Mr. Patel the whole time."
+    },
+    "hints": [
+      "Look very closely at the ribbon. Is anything tucked behind it?",
+      "Whose name starts with the letter L?"
+    ],
+    "meta": "Ages 8+ · find 1 clue",
+    "minAge": 8,
+    "need": 1,
+    "people": [
+      {
+        "id": "zara",
+        "name": "Zara",
+        "role": "Volcano maker",
+        "says": "I was at the snack table with Mr. Patel from 2:45 until 3:15. We ate apple slices. I really hope I win! But Mr. Patel has to choose. You can't just pin a ribbon on yourself."
+      },
+      {
+        "id": "leo",
+        "name": "Leo",
+        "role": "Robot maker",
+        "says": "I was doing clean-up. I picked up cups and swept the floor. I, um, I don't know anything about the ribbon. Can I go back to my robot now?"
+      },
+      {
+        "id": "patel",
+        "name": "Mr. Patel",
+        "role": "Science fair judge",
+        "says": "I put the ribbon on my clipboard stand at 2:40. Then I went to the snack table with Zara. When we came back at 3:15, the ribbon was on the volcano table. I have not picked a winner yet!"
+      }
+    ],
+    "places": [
+      {
+        "id": "robot",
+        "name": "Sock-sorting robot",
+        "text": "Leo's robot sits on a blue table. It beeps and drops socks into two piles: stripes and spots. A card says Made by Leo. There is no ribbon here."
+      },
+      {
+        "clue": {
+          "d": "The ribbon is pinned at Zara's volcano table.",
+          "id": "zaratable",
+          "t": "Ribbon on Zara's table"
+        },
+        "id": "volcano",
+        "name": "Glitter volcano",
+        "text": "Zara's brown volcano sparkles with glitter. A card says Made by Zara. The blue ribbon is pinned at the front of her table."
+      },
+      {
+        "clue": {
+          "d": "A note behind the ribbon says: Great job! From L.",
+          "id": "note",
+          "t": "A note signed L"
+        },
+        "id": "ribbon",
+        "name": "Blue ribbon",
+        "text": "Pip looks closely at the blue ribbon. A little yellow sticky note is tucked behind it. The note says: Great job! From L."
+      },
+      {
+        "clue": {
+          "d": "Mr. Patel wrote WOW next to the volcano, but no winner yet.",
+          "id": "wow",
+          "t": "Volcano - WOW!"
+        },
+        "id": "clipboard",
+        "name": "Judge's clipboard",
+        "text": "Mr. Patel's clipboard sits on its stand. It says: Robot - very clever! Volcano - WOW! Bean plant - nice! At the bottom it says: Winner: ??? The ribbon used to sit here."
+      },
+      {
+        "clue": {
+          "d": "Leo was on clean-up duty at 3:00.",
+          "id": "cleanup",
+          "t": "Leo on clean-up"
+        },
+        "id": "sheet",
+        "name": "Clean-up sheet",
+        "text": "A paper on the wall says CLEAN-UP 3:00 Leo. Someone has drawn a check mark next to it."
+      },
+      {
+        "id": "plant",
+        "name": "Bean plant",
+        "text": "A bean plant grows in a pot. A card says Made by Room 5. One leaf is very big! Nothing else looks different here."
+      }
+    ],
+    "proof": [
+      "note"
+    ],
+    "retorts": [
+      "That's not right! Look at the clues again, Pip.",
+      "Hmm, that doesn't show it was me. Find a better clue!"
+    ],
+    "scene": "ribbon",
+    "title": "The Too-Early Ribbon",
+    "world": "Maple Street School",
+    "wrap": "During clean-up, Leo found the blue ribbon on the floor. It had slipped off the stand! He saw WOW next to the volcano, so he thought Zara had won. He pinned it on her table with a kind note. Then he worried he got it wrong, so he kept quiet. Leo told Mr. Patel the truth. Mr. Patel said thank you for picking it up. They put the ribbon back on the stand together, and at 3:30 Mr. Patel picked the winner fair and square. Zara gave Leo a high five for his kind note."
+  },
+  "date": "2026-10-23",
+  "tier": "junior"
+}

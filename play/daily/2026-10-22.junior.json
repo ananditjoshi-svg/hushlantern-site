@@ -1,0 +1,102 @@
+{
+  "case": {
+    "brief": "It is sunrise at the lake. Ben the waterfront counselor tied up every canoe last night. But now red canoe number 3 is drifting out on the water all by itself! Nobody is in it, and everyone is safe. But somebody must have used it this morning and tied it back badly. Who took canoe 3 out?",
+    "culprit": "mateo",
+    "det": "scout",
+    "examine": "Scout checks out",
+    "font": "'Bree Serif',Georgia,serif",
+    "hero": "Scout",
+    "herrings": {
+      "fastest": "Wanting the fast canoe isn't the same as taking it. Whose vest got wet?",
+      "loose": "A rushed knot shows someone hurried. It doesn't show who.",
+      "nostar": "Hana can't tie the knot yet, but the canoe WAS tied, just badly. And her vest is dry."
+    },
+    "hints": [
+      "Anyone who paddles a canoe has to wear a life vest. Check the vests.",
+      "Look for the one thing that is wet when everything else is dry."
+    ],
+    "meta": "Ages 8+ · find 1 clue",
+    "minAge": 8,
+    "need": 1,
+    "people": [
+      {
+        "id": "mateo",
+        "name": "Mateo",
+        "role": "Camper",
+        "says": "Me? I was asleep in my bunk until the breakfast bell. I did not go near the canoes. Um, can we eat now? I am really hungry."
+      },
+      {
+        "clue": {
+          "d": "Hana wanted canoe 3 for today's race.",
+          "id": "fastest",
+          "t": "Hana wants canoe 3"
+        },
+        "id": "hana",
+        "name": "Hana",
+        "role": "Camper",
+        "says": "Canoe 3 is the fastest one! I wanted to use it in the race today. But I did not take it, I promise. I can't even tie the dock knot yet."
+      },
+      {
+        "id": "ben",
+        "name": "Ben",
+        "role": "Waterfront counselor",
+        "says": "I tied every canoe tight last night. This morning I heard the breakfast bell and saw someone run up from the dock. They went too fast for me to see who."
+      }
+    ],
+    "places": [
+      {
+        "clue": {
+          "d": "Only one vest is wet this morning, and its tag says MATEO.",
+          "id": "wetvest",
+          "t": "Mateo's wet vest"
+        },
+        "id": "vests",
+        "name": "Life-vest rack",
+        "text": "A row of orange life vests hangs on hooks. They are all dry except one. That vest is darker and dripping wet. Inside the collar, a name tag says MATEO in marker."
+      },
+      {
+        "clue": {
+          "d": "Hana has not earned her KNOTS badge yet.",
+          "id": "nostar",
+          "t": "Hana has no KNOTS star"
+        },
+        "id": "badges",
+        "name": "KNOTS badge board",
+        "text": "The board shows who has earned the KNOTS badge. Mateo has a gold star. Ben has a gold star. Hana's name has no star yet. She only started camp on Monday."
+      },
+      {
+        "id": "rack",
+        "name": "Canoe rack",
+        "text": "Canoes 1, 2 and 4 rest on the rack. The spot for canoe 3 is empty. A paddle is missing from its hook too."
+      },
+      {
+        "clue": {
+          "d": "Canoe 3 was tied in a rush, and the knot slipped.",
+          "id": "loose",
+          "t": "A hurried knot"
+        },
+        "id": "cleat",
+        "name": "Dock cleat",
+        "text": "A rope is still tied to the cleat, but the other end just floats in the water. It looks like the knot on the canoe came loose. Someone tied it in a big hurry."
+      },
+      {
+        "id": "canoe",
+        "name": "Canoe 3",
+        "text": "The red canoe bobs gently out on the lake. A paddle lies inside it. The seat is still wet, so someone sat in it not long ago."
+      }
+    ],
+    "proof": [
+      "wetvest"
+    ],
+    "retorts": [
+      "It wasn't me! Look at the clues again, Scout.",
+      "Hmm, that doesn't show it was me. Find something better!"
+    ],
+    "scene": "canoe",
+    "title": "The Runaway Canoe",
+    "world": "Camp Pinecrest",
+    "wrap": "Mateo woke up early and paddled canoe 3 to watch the sunrise. Then the breakfast bell rang, so he tied the canoe fast and ran. The knot slipped, and the canoe floated away. Mateo said sorry to Ben. Ben paddled out with him to bring canoe 3 back, and they practiced the dock knot together. Tomorrow, Mateo will ask first, and Ben will come watch the sunrise too."
+  },
+  "date": "2026-10-22",
+  "tier": "junior"
+}

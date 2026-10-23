@@ -1,0 +1,114 @@
+{
+  "case": {
+    "brief": "Tomorrow is the Harvest Contest, and the winning bard earns a place at the royal court. Each night Lisel hangs her silver-stringed lute on the hook above the hearth of the Gilded Goose inn. This morning the hook was empty, and her red case lay open and bare. Corvin the smith sat by the fire until closing. Tamsin the innkeeper and Lisel slept upstairs. Who took the lute?",
+    "culprit": "tamsin",
+    "det": "wren_fantasy",
+    "examine": "Wren examines",
+    "font": "'Cinzel',Georgia,serif",
+    "hero": "Investigator Wren",
+    "herrings": {
+      "bill": "A debt might give Corvin a grudge, but hiding the lute would never get him paid. And he carried an oil lantern, not a green candle.",
+      "court": "A reason to want something is not proof of doing it. Only the marks left behind can show who acted.",
+      "entry": "Lisel was nervous, but she crossed out the word. And her hands are spotless, while the hider had sooty fingers.",
+      "latch": "It tells you the lute was taken by someone already inside, but Corvin was inside all evening too. It names no one."
+    },
+    "hints": [
+      "Who carried a green candle last night, and who walked home by lantern?",
+      "Whose hands were black with soot, and whose were spotless?"
+    ],
+    "meta": "Ages 12+ · prove it with 2 clues",
+    "minAge": 12,
+    "need": 2,
+    "people": [
+      {
+        "id": "corvin",
+        "name": "Corvin",
+        "role": "Smith",
+        "says": "Forge soot never washes off me, as you can see. I sat by the fire till the closing bell, then walked home with my own oil lantern. Never set foot upstairs. Aye, Lisel owes me for those pegs, but she'll pay when she wins. Ask her about her nerves. She's been jittery all week."
+      },
+      {
+        "id": "lisel",
+        "name": "Lisel",
+        "role": "Bard",
+        "says": "I hung my lute on the hook at supper, as always, and sat by the window all evening. I never go near the hearth; I scrub my hands before I touch my strings. See? Spotless. Yes, I nearly withdrew. Then I decided I would rather lose than never try. I took my green candle up at closing."
+      },
+      {
+        "clue": {
+          "d": "If Lisel wins, she leaves the inn for the royal court. Tamsin would lose her best draw.",
+          "id": "court",
+          "t": "Tamsin will miss Lisel"
+        },
+        "id": "tamsin",
+        "name": "Tamsin",
+        "role": "Innkeeper",
+        "says": "I raked and banked the hearth myself at closing, same as every night, then took my green candle up to bed. Green candles live in the bedrooms only, never down here. If Lisel wins, she's off to court, and my Goose goes quiet again. Still, I'd never wish her ill."
+      }
+    ],
+    "places": [
+      {
+        "clue": {
+          "d": "Green wax dripped under the hook. Green candles are only for the bedrooms upstairs.",
+          "id": "wax",
+          "t": "Green wax under the hook"
+        },
+        "id": "hook",
+        "name": "Hook over the hearth",
+        "text": "The brass hook above the hearth is polished bright, without a speck of soot on it. It is empty. On the hearthstone just below it lies a fresh drip of green candle wax, the kind that falls from a candle carried in the dark."
+      },
+      {
+        "clue": {
+          "d": "Whoever hid the lute behind the books had soot-black fingers.",
+          "id": "soot",
+          "t": "Sooty prints on the books"
+        },
+        "id": "lore",
+        "name": "Bookshelf",
+        "text": "Thick old books of tavern lore fill the shelf. One row sticks out a finger's width. Behind it, wrapped in a cloth, is Lisel's lute, safe and unharmed. The spines of that row carry black, sooty fingerprints."
+      },
+      {
+        "clue": {
+          "d": "The window was latched inside all night. No one came in from outside.",
+          "id": "latch",
+          "t": "Latched window"
+        },
+        "id": "window",
+        "name": "Latched window",
+        "text": "The window is latched from the inside. Frost on the outer sill is smooth and unbroken. Nobody came in or went out this way during the night."
+      },
+      {
+        "clue": {
+          "d": "Lisel still owes Corvin for the silver tuning pegs on her lute.",
+          "id": "bill",
+          "t": "Corvin's unpaid bill"
+        },
+        "id": "lutecase",
+        "name": "Red lute case",
+        "text": "The red case lies open on the bench, its velvet empty. Tucked in a pocket of the lid is a bill from Corvin the smith for new silver tuning pegs. It is marked UNPAID in heavy letters."
+      },
+      {
+        "clue": {
+          "d": "Lisel wrote Withdraw? on her contest slip, then crossed it out.",
+          "id": "entry",
+          "t": "Lisel's entry slip"
+        },
+        "id": "slip",
+        "name": "Paper on the bar",
+        "text": "A crumpled paper lies on the bar. It is Lisel's entry slip for the Harvest Contest. Someone has written Withdraw? across it, then crossed the word out hard."
+      }
+    ],
+    "proof": [
+      "wax",
+      "soot"
+    ],
+    "retorts": [
+      "The clues will not bear that name. Ask who carried a candle and whose hands were black.",
+      "A suspicion, not proof. Show me two clues that close every other door."
+    ],
+    "scene": "lute",
+    "title": "The Hidden Lute",
+    "world": "Fantasy Kingdom",
+    "wrap": "After closing, Tamsin came down by the light of her green candle. Her hands were still black from banking the hearth. She lifted the lute from its hook and hid it behind the lore books, hoping Lisel would miss the contest and stay at the Goose. Faced with the wax and the soot, she confessed and returned the lute. Lisel forgave her and promised to play at the Goose every harvest. That evening she won the contest, and paid Corvin's bill."
+  },
+  "date": "2026-10-24",
+  "tier": "detective"
+}

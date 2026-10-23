@@ -1,0 +1,108 @@
+{
+  "case": {
+    "brief": "Biscuit the dog's favorite squeaky duck is missing, and Biscuit is very sad. Somebody hid it. Who?",
+    "culprit": "jay",
+    "det": "pip",
+    "examine": "Pip looks at",
+    "font": "'Baloo 2','Comic Sans MS',sans-serif",
+    "hero": "Pip",
+    "herrings": {
+      "hole": "Biscuit dug a hole, but there's no duck in it.",
+      "jaysays": "Liking quiet isn't proof. Where's the duck?",
+      "mosays": "Good idea, Mo! But the sandbox hole is empty.",
+      "mud": "Big-kid prints could be Ruby or Jay. Find the duck!"
+    },
+    "hints": [
+      "Who wanted things to be quiet?",
+      "Look up high, somewhere a big kid can climb."
+    ],
+    "meta": "Ages 8+ · find 1 clue",
+    "minAge": 8,
+    "need": 1,
+    "people": [
+      {
+        "id": "ruby",
+        "name": "Ruby",
+        "role": "Club leader",
+        "says": "Biscuit squeaks that duck ALL day long. I kind of like it."
+      },
+      {
+        "clue": {
+          "d": "Jay was doing homework and likes it quiet.",
+          "id": "jaysays",
+          "t": "Jay likes quiet"
+        },
+        "id": "jay",
+        "name": "Jay",
+        "role": "Club member",
+        "says": "I've been doing homework all morning. Super quiet. Quiet is good."
+      },
+      {
+        "clue": {
+          "d": "Mo thinks Biscuit buried it.",
+          "id": "mosays",
+          "t": "Mo's idea"
+        },
+        "id": "mo",
+        "name": "Mo",
+        "role": "Ruby's little sibling",
+        "says": "Biscuit was digging in the sandbox! Maybe he buried it?"
+      }
+    ],
+    "places": [
+      {
+        "id": "doghouse",
+        "name": "Doghouse",
+        "text": "Biscuit is awake now, with droopy ears. His toy basket is empty."
+      },
+      {
+        "clue": {
+          "d": "Someone dug in the sandbox. It's empty.",
+          "id": "hole",
+          "t": "Filled-in hole"
+        },
+        "id": "sandbox",
+        "name": "Sandbox",
+        "text": "A little hole dug in the sand, then filled back in. Nothing inside."
+      },
+      {
+        "id": "wagon",
+        "name": "Red wagon",
+        "text": "Just Mo's teddy bear today."
+      },
+      {
+        "clue": {
+          "d": "The duck is in the treehouse with a note from Jay.",
+          "id": "note",
+          "t": "Duck and Jay's note"
+        },
+        "id": "treehouse",
+        "name": "Treehouse",
+        "text": "Under a blanket in the treehouse: the squeaky duck! Next to it, a note in Jay's handwriting: “Too SQUEAKY. Do not disturb.”"
+      },
+      {
+        "clue": {
+          "d": "A big kid climbed the ladder.",
+          "id": "mud",
+          "t": "Big-kid prints"
+        },
+        "id": "ladder",
+        "name": "Ladder",
+        "text": "Muddy sneaker prints on the bottom rungs. Big-kid size."
+      }
+    ],
+    "proof": [
+      "note"
+    ],
+    "retorts": [
+      "It wasn't me! Look at the clues again.",
+      "Hmm, that clue doesn't prove it. Try another one!"
+    ],
+    "scene": "treehouse",
+    "title": "The Squeaky Duck",
+    "world": "Maple Street",
+    "wrap": "Jay hid the squeaky duck in the treehouse so he could finish his homework in peace. He gave it back to Biscuit, and now the duck only squeaks in the backyard."
+  },
+  "date": "2026-10-21",
+  "tier": "junior"
+}

@@ -1,0 +1,114 @@
+{
+  "case": {
+    "brief": "The great tapestry map in the chancellor's tower now shows a river ford that doesn't exist, and a merchant is already charging travellers a toll to use it. Someone changed the kingdom's map.",
+    "culprit": "garran",
+    "det": "wren_fantasy",
+    "examine": "Wren examines",
+    "font": "'Cinzel',Georgia,serif",
+    "hero": "Investigator Wren",
+    "herrings": {
+      "garransays": "That's his account. Does any evidence contradict it?",
+      "ledger": "The ledger lists visitors. Who was in the tower and never wrote themselves in?",
+      "sign": "A motive, not proof. Who could actually reach the map?"
+    },
+    "hints": [
+      "The map was fine at fifth bell. Who was in the tower after that?",
+      "Look closely at the new stitching, and ask who sews like that."
+    ],
+    "meta": "Ages 12+ · prove it with 2 clues",
+    "minAge": 12,
+    "need": 2,
+    "people": [
+      {
+        "clue": {
+          "d": "Garran mends his own tabard with fine stitches.",
+          "id": "mend",
+          "t": "Garran can stitch"
+        },
+        "id": "mira",
+        "name": "Mira",
+        "role": "Squire",
+        "says": "Sir Garran mended his own tabard last week. Best stitcher in the barracks, tiny little stitches."
+      },
+      {
+        "clue": {
+          "d": "No ford on the map at fifth bell.",
+          "id": "copy",
+          "t": "Aldo's archive copy"
+        },
+        "id": "aldo",
+        "name": "Brother Aldo",
+        "role": "Royal scribe",
+        "says": "When I copied the map at fifth bell, there was no ford on it. My archive copy proves it."
+      },
+      {
+        "clue": {
+          "d": "Says only Aldo came up, and he never left.",
+          "id": "garransays",
+          "t": "Garran's account"
+        },
+        "id": "garran",
+        "name": "Sir Garran",
+        "role": "Tower guard",
+        "says": "Only Brother Aldo came up all day. I'd know, I never left my post."
+      }
+    ],
+    "places": [
+      {
+        "clue": {
+          "d": "The ford was stitched in guards' tabard blue.",
+          "id": "thread",
+          "t": "Tabard-blue thread"
+        },
+        "id": "tapestry",
+        "name": "Tapestry map",
+        "text": "The new ford is stitched in bright royal blue, the same blue as the guards' tabards. The stitches are tiny and neat: a practised hand."
+      },
+      {
+        "clue": {
+          "d": "The toll is run by the Garran brothers.",
+          "id": "sign",
+          "t": "Toll booth sign"
+        },
+        "id": "window",
+        "name": "Arched window",
+        "text": "Far below, a new toll booth by the river. Its sign reads: Garran Brothers' Crossing."
+      },
+      {
+        "id": "sealbox",
+        "name": "Seal box",
+        "text": "The Royal Seal is safe in its box. This isn't about the seal."
+      },
+      {
+        "id": "wax",
+        "name": "Candle wax",
+        "text": "Fresh drips from a tallow candle, the kind the barracks use. The scriptorium only burns green wax."
+      },
+      {
+        "clue": {
+          "d": "Only Aldo is listed; the guard never logs himself.",
+          "id": "ledger",
+          "t": "Guard's ledger"
+        },
+        "id": "ledger",
+        "name": "Guard's ledger",
+        "text": "Fifth bell: Brother Aldo, to copy the map for the archive. Nobody else is listed. The guard on duty never writes himself in."
+      }
+    ],
+    "proof": [
+      "thread",
+      "mend",
+      "copy"
+    ],
+    "retorts": [
+      "By the crown, you wrong me, Investigator!",
+      "Bring me before the queen, then. You'll see."
+    ],
+    "scene": "seal",
+    "title": "The False Ford",
+    "world": "Fantasy Kingdom",
+    "wrap": "Alone on guard after Brother Aldo left, Sir Garran stitched a false ford onto the kingdom's map with tabard thread, so his brother could charge a toll. Aldo's archive copy and the matching blue thread exposed him."
+  },
+  "date": "2026-10-20",
+  "tier": "detective"
+}

@@ -1,0 +1,26 @@
+/* sign-in gate + account panel (production game) */
+#hlgate,.hlacctp{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:16px;background:radial-gradient(ellipse at 50% 30%,#2A2560 0%,#161931 60%,#0E1024 100%);overflow:auto}
+.hlacctp{background:rgba(14,16,36,.72)}
+.hlg-card{width:min(440px,100%);background:#1F2346;color:#EDEAF4;border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:28px 24px;box-shadow:0 24px 60px rgba(0,0,0,.45);font:400 16px/1.55 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;gap:12px}
+.hlg-card.small{width:min(380px,100%)}
+.hlg-card h1,.hlg-card h2{margin:0;font:400 30px/1.1 Gloock,Georgia,serif}
+.hlg-card h2{font-size:24px}
+.hlg-card p{margin:0;color:#C8C3E0}
+.hlg-l{margin-bottom:2px}
+.hlg-card form{display:grid;gap:8px;margin-top:4px}
+.hlg-card label{font-weight:600;font-size:14.5px}
+.hlg-card input{min-height:50px;border-radius:12px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font:500 16px Figtree,system-ui,sans-serif;padding:0 14px;width:100%;box-sizing:border-box}
+.hlg-btn{min-height:48px;border-radius:999px;border:2px solid transparent;background:#E9A23B;color:#1E1B2E;font:700 16px Figtree,system-ui,sans-serif;padding:0 20px;cursor:pointer;width:100%}
+.hlg-btn:hover{filter:brightness(1.06)}
+.hlg-btn:disabled{opacity:.6;cursor:default}
+.hlg-btn.ghost{background:transparent;color:#EDEAF4;border-color:rgba(255,255,255,.35)}
+.hlg-row{display:flex;gap:10px;flex-wrap:wrap}
+.hlg-row .hlg-btn{flex:1 1 140px;width:auto}
+.hlg-note{font-size:13.5px}
+.hlg-note.small{font-size:12.5px;color:#A9A3C8}
+.hlg-note a{color:#EDEAF4}
+.hlg-msg{min-height:1.3em;font-weight:600;color:#FFB4A8 !important}
+.hlg-or{height:1px;background:rgba(255,255,255,.15);margin:6px 0}
+.hlg-card :focus-visible{outline:3px solid #E9A23B;outline-offset:2px}
+.hlacct{border:1px solid var(--line,#ccc);background:var(--paper,#fff);color:var(--ink,#111);border-radius:999px;font:600 13px/1 inherit;padding:7px 12px;min-height:34px;cursor:pointer;margin-right:8px;white-space:nowrap}
+@media (max-width:480px){.hlacct .hlacct-t{display:none}}

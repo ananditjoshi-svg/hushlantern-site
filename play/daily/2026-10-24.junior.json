@@ -1,0 +1,107 @@
+{
+  "case": {
+    "brief": "It is skit night at Camp Pinecrest! After swimming, Counselor Sam hung his big white towel on the laundry line. Now the towel is gone, and only an empty clip is left. Grace says she saw something white floating by the hollow tree, and it was giggling. Nobody is scared, but everyone is curious. Who took Counselor Sam's towel?",
+    "culprit": "ollie",
+    "det": "scout",
+    "examine": "Scout checks out",
+    "font": "'Bree Serif',Georgia,serif",
+    "hero": "Scout",
+    "herrings": {
+      "clip": "It shows someone took the towel on purpose, but it does not tell us who.",
+      "jokes": "Grace has a book about sheet ghosts, but her orange bracelet is still on her wrist, and she stayed by the fire.",
+      "pins": "Sam was near the shed, but the towel is his own. Why would he hide it from himself?"
+    },
+    "hints": [
+      "Look for a tiny light in the dark.",
+      "Who got which color glow bracelet tonight?"
+    ],
+    "meta": "Ages 8+ · find 1 clue",
+    "minAge": 8,
+    "need": 1,
+    "people": [
+      {
+        "id": "campsam",
+        "name": "Counselor Sam",
+        "role": "Camp counselor",
+        "says": "I hung my big white towel on the line after swimming, and at dinner it was gone! Tonight I handed out glow bracelets for skit night. Ollie got green, Grace got orange, and I took yellow. Only one of each color, so nobody gets mixed up in the dark."
+      },
+      {
+        "id": "ollie",
+        "name": "Ollie",
+        "role": "Camper",
+        "says": "A ghost? Wooo! Maybe the owl took it. Ha ha. I've been practicing my mystery act for skit night. It's a big surprise, so I can't tell you about it. Oh, um, I lost my glow bracelet somewhere."
+      },
+      {
+        "id": "grace",
+        "name": "Grace",
+        "role": "Camper",
+        "says": "I've been reading my joke book by the fire. Then I saw something white float by the hollow tree. It was giggling, so I giggled too! It looked like a ghost from my book, but I never left the fire. Look, my orange bracelet is right here."
+      }
+    ],
+    "places": [
+      {
+        "clue": {
+          "d": "The towel did not blow away. Someone took it off the line on purpose.",
+          "id": "clip",
+          "t": "An empty clip"
+        },
+        "id": "laundry",
+        "name": "Laundry line",
+        "text": "Socks and swimsuits hang on the line. One clip holds nothing at all. Another clip lies in the grass, still closed. The wind is soft tonight, too soft to blow a big towel away."
+      },
+      {
+        "id": "fire",
+        "name": "Campfire",
+        "text": "The campfire crackles and glows. Marshmallow sticks lean on a rock. Everyone has been sitting here since dinner, singing songs."
+      },
+      {
+        "clue": {
+          "d": "Grace's book has a page about making a friendly sheet ghost.",
+          "id": "jokes",
+          "t": "Grace's ghost joke book"
+        },
+        "id": "book",
+        "name": "Purple book",
+        "text": "A purple book sits on a log. It is called Silly Ghost Jokes. A leaf marks a page about how to make a friendly sheet ghost. Grace's name is written inside the cover."
+      },
+      {
+        "clue": {
+          "d": "A green glow bracelet is caught in the hidden towel. Only Ollie got a green bracelet tonight.",
+          "id": "glow",
+          "t": "Green glow bracelet"
+        },
+        "id": "hollow",
+        "name": "Hollow tree",
+        "text": "Inside the hole in the old tree, something white is folded up. It is Counselor Sam's towel! A paper face with two big eyes and a smile is taped to it. A tiny green light glows in the folds. It is a green glow bracelet, caught in the towel."
+      },
+      {
+        "id": "owl",
+        "name": "Owl on a branch",
+        "text": "An owl sits on a branch and blinks. Owls look for mice and bugs, not towels. There are no white threads on its brown and gray feathers."
+      },
+      {
+        "clue": {
+          "d": "Counselor Sam fetched spare clips from the shed before dinner.",
+          "id": "pins",
+          "t": "Box of spare clips"
+        },
+        "id": "shed",
+        "name": "Supplies shed",
+        "text": "The SUPPLIES shed door is open a crack. Inside is a box of spare clips, some rope and flashlights. Counselor Sam says he came here to get more clips before dinner."
+      }
+    ],
+    "proof": [
+      "glow"
+    ],
+    "retorts": [
+      "Hmm, that does not fit the clues. Look again at the tiny light.",
+      "That is a good guess, but which clue really shows who it was?"
+    ],
+    "scene": "ghost",
+    "title": "The Giggling Ghost",
+    "world": "Camp Pinecrest",
+    "wrap": "Ollie borrowed Counselor Sam's towel to make a friendly ghost for his skit night surprise. He hid it in the hollow tree, but his green glow bracelet got caught in the folds. Ollie said sorry for taking it without asking. Counselor Sam smiled and said Ollie could use the towel in his skit, as long as he asks first next time. That night, the giggling ghost was the funniest act of all!"
+  },
+  "date": "2026-10-24",
+  "tier": "junior"
+}

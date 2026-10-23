@@ -1,0 +1,125 @@
+{
+  "case": {
+    "brief": "Opening night at the Calloway Gallery. At 9:00 sharp, every light went out. When they came back at 9:03, the famous landscape painting was still on the wall. But by midnight an expert noticed the paint on the signature was still tacky. The real painting is eighty years old. Someone swapped it for a copy in the dark. Who did it?",
+    "culprit": "iris",
+    "det": "wren_noir",
+    "examine": "Wren examines",
+    "font": "'Special Elite','Courier New',monospace",
+    "hero": "Inspector Wren",
+    "herrings": {
+      "cable": "The camera was reachable by anyone in the gallery. It shows planning, not a person.",
+      "crate": "Felix carries serving boards in flat crates to every event, and he has no code for the control room, so he could not have cut the lights.",
+      "note": "A private deal hints at a motive, but the note is unsigned and could belong to anyone at the gala.",
+      "switch": "It shows the lights were cut from inside the control room, but not by whom. Ask who could get in.",
+      "tacky": "It proves a swap happened in the dark, but anyone could have lifted a painting off a wall. It names no one."
+    },
+    "hints": [
+      "The lights were cut from a locked room. Who could open its door?",
+      "Of the two people with codes, who was seen somewhere else at 9:00?"
+    ],
+    "meta": "Ages 12+ · prove it with 2 clues",
+    "minAge": 12,
+    "need": 2,
+    "people": [
+      {
+        "clue": {
+          "d": "Felix says Noor stood beside him at the podium from 8:55 to 9:03.",
+          "id": "alibi",
+          "t": "Noor stayed at the podium"
+        },
+        "id": "felix",
+        "name": "Felix",
+        "role": "Caterer",
+        "says": "The crate? It carries my big serving boards, they're on the buffet. When the lights died I was at the podium with Noor. She had the mic in one hand and her radio crackling on her belt the whole three minutes. Never left my side, from 8:55 till the lights came back."
+      },
+      {
+        "id": "iris",
+        "name": "Iris",
+        "role": "Curator",
+        "says": "At nine I was in the coat room, fetching my shawl. Dreadful timing. I've looked after that painting for twelve years. If anyone wanted it, look at the caterer. That crate in his van is the perfect size, isn't it?"
+      },
+      {
+        "id": "noor",
+        "name": "Noor",
+        "role": "Guard",
+        "says": "I was holding the mic, waiting for Iris to start her speech. She was meant to begin at nine. She never came up. Felix was beside me in the dark, and I radioed for a torch. I keep my code card in my pocket, and it never left me."
+      }
+    ],
+    "places": [
+      {
+        "clue": {
+          "d": "The painting on the wall is a fresh copy. The swap happened during the blackout.",
+          "id": "tacky",
+          "t": "Tacky signature"
+        },
+        "id": "painting",
+        "name": "Landscape painting",
+        "text": "Hills, a river, a gold sunset. It looks right at first glance. But the signature in the corner is soft and slightly tacky under a fingertip, and the frame's hanging wire is new and shiny."
+      },
+      {
+        "clue": {
+          "d": "Someone inside the control room cut the lights on purpose at 9:00.",
+          "id": "switch",
+          "t": "Switched off by hand"
+        },
+        "id": "breaker",
+        "name": "Breaker panel",
+        "text": "The breaker panel is inside the locked control room. The main switch was not tripped by a fault. It was pushed off by hand, then pushed back on three minutes later."
+      },
+      {
+        "clue": {
+          "d": "The control room opened with a staff code at 9:00. Only Iris and Noor have codes.",
+          "id": "code",
+          "t": "Staff code at 9:00"
+        },
+        "id": "keypad",
+        "name": "Control room keypad",
+        "text": "The keypad's little screen shows its last entry: 9:00 PM, STAFF CODE ACCEPTED. A card beside it reads: Staff codes issued to I. Vance (curator) and N. Okoro (guard). Caterers use the side door."
+      },
+      {
+        "clue": {
+          "d": "Someone pulled the camera cable just before the blackout.",
+          "id": "cable",
+          "t": "Camera unplugged at 8:58"
+        },
+        "id": "camera",
+        "name": "Security camera",
+        "text": "The camera points at the painting. Its cable has been pulled loose from the wall. The last saved frame, at 8:58, shows only the empty gallery and a blur at the very edge."
+      },
+      {
+        "clue": {
+          "d": "Someone had a private deal for a piece to be collected Friday.",
+          "id": "note",
+          "t": "Unsigned note"
+        },
+        "id": "program",
+        "name": "Podium",
+        "text": "The podium holds the evening's program and the microphone. Tucked under the program is a folded note: Delighted with our arrangement. The piece will be collected Friday. No signature."
+      },
+      {
+        "clue": {
+          "d": "Felix's van holds an empty crate the size of the painting.",
+          "id": "crate",
+          "t": "Flat empty crate"
+        },
+        "id": "van",
+        "name": "Caterer's van",
+        "text": "Felix's van is parked by the side door. In the back are trays, napkins, and one flat, empty wooden crate, just about the size of the landscape painting."
+      }
+    ],
+    "proof": [
+      "code",
+      "alibi"
+    ],
+    "retorts": [
+      "Wrong door, I'm afraid. Think about who could get into the control room.",
+      "That points somewhere, but it doesn't close the case. Give me two clues that leave only one name."
+    ],
+    "scene": "gallery",
+    "title": "Three Minutes in the Dark",
+    "world": "Classic Noir",
+    "wrap": "Iris had quietly sold the real landscape to a private buyer and hired a copyist. She pulled the camera cable at 8:58, used her code on the control room at 9:00, cut the lights, and swapped the frames in the dark, hiding the original in the coat room under her shawl. With Noor at the podium beside Felix, only Iris could have opened that door. She confessed. The original went back on the wall, the sale was cancelled, and the money was returned."
+  },
+  "date": "2026-10-25",
+  "tier": "detective"
+}

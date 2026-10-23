@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Studio dashboard · Hushlantern</title>
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{color-scheme:light;--bg:#F4F2F7;--surface:#FCFCFB;--ink:#0B0B0B;--ink2:#52514E;--muted:#7A7872;--line:#E2DFE7;--grid:#ECEAF0;--series-1:#2a78d6;--accent:#E9A23B;--night:#161931;--err:#B3261E}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){color-scheme:dark;--bg:#111222;--surface:#1A1A19;--ink:#F0EFEC;--ink2:#C3C2B7;--muted:#9B9A92;--line:#2E2F3A;--grid:#262733;--series-1:#3987e5;--err:#FFB4A8}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111222;--surface:#1A1A19;--ink:#F0EFEC;--ink2:#C3C2B7;--muted:#9B9A92;--line:#2E2F3A;--grid:#262733;--series-1:#3987e5;--err:#FFB4A8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
+.top{background:var(--night);color:#EDEAF4}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.bar{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;gap:10px;align-items:center;font:400 20px Gloock,Georgia,serif;color:#EDEAF4;text-decoration:none}
+.who{font-size:13.5px;color:#B9B4D2;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.who button{border:1px solid rgba(255,255,255,.35);background:transparent;color:#EDEAF4;border-radius:999px;padding:6px 12px;font:600 13px Figtree,sans-serif;cursor:pointer}
+h1{font:400 clamp(26px,3.4vw,36px)/1.1 Gloock,Georgia,serif;margin:0}
+.head{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:end;justify-content:space-between;padding:24px 0 8px}
+.head p{margin:4px 0 0;color:var(--ink2);font-size:14px}
+.range{display:flex;gap:6px;flex-wrap:wrap}
+.range button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;font:600 13.5px Figtree,sans-serif;cursor:pointer;min-height:34px}
+.range button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.range button:focus-visible,.who button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.sec{margin-top:22px}
+.sec h2{font:600 13px/1.3 "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-width:0}
+.tile .k{font-size:13px;color:var(--ink2)}
+.tile .v{font:600 28px/1.15 Figtree,sans-serif;margin-top:4px;font-variant-numeric:tabular-nums}
+.tile .s{font-size:12.5px;color:var(--muted);margin-top:2px}
+.charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.charts{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-width:0;position:relative}
+.card h3{margin:0;font-size:15px;font-weight:700}
+.card .sub{font-size:12.5px;color:var(--muted);margin:2px 0 8px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.chart .ax{fill:var(--muted);font:500 11px "IBM Plex Mono",monospace}
+.chart .ln{fill:none;stroke:var(--series-1);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.chart .ar{fill:var(--series-1);opacity:.1}
+.chart .dt{fill:var(--series-1);stroke:var(--surface);stroke-width:2}
+.chart .xh{stroke:var(--ink2);stroke-width:1;stroke-dasharray:3 3;opacity:0}
+.chart .dt{opacity:0}
+.chart.on .xh,.chart.on .dt{opacity:1}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--surface);border-radius:8px;padding:6px 10px;font-size:12.5px;white-space:nowrap;transform:translate(-50%,-110%);opacity:0;transition:opacity .1s}
+.tip b{font-variant-numeric:tabular-nums}
+details.tv{margin-top:6px;font-size:13px}
+details.tv summary{cursor:pointer;color:var(--ink2)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font:500 11.5px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.empty{color:var(--muted);font-size:14px;padding:6px 0}
+.gate{max-width:440px;margin:48px auto;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 22px;display:grid;gap:12px}
+.gate input{min-height:46px;border:1px solid var(--line);border-radius:10px;padding:0 12px;font:500 16px Figtree,sans-serif;background:var(--bg);color:var(--ink)}
+.gate button{min-height:46px;border-radius:999px;border:0;background:var(--accent);color:#1E1B2E;font:700 15px Figtree,sans-serif;cursor:pointer}
+.msg{color:var(--err);font-weight:600;min-height:1.2em}
+.foot{color:var(--muted);font-size:12.5px;padding:24px 0 40px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="/"><svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><path d="M13 7 Q17 1 21 7" fill="none" stroke="#C9D6F2" stroke-width="1.8"/><rect x="11" y="7" width="12" height="3" rx="1" fill="#C9D6F2"/><path d="M11.5 10 L22.5 10 L24 27 L10 27Z" fill="none" stroke="#C9D6F2" stroke-width="1.8"/><path d="M17 13.5 Q20.5 18 17 23.5 Q13.5 18 17 13.5Z" fill="#E9A23B"/><rect x="9" y="27" width="16" height="3" rx="1" fill="#C9D6F2"/></svg>Hushlantern · Studio dashboard</a>
+  <div class="who" id="who"></div>
+</div></header>
+<main class="wrap" id="app"><p class="empty" style="padding:40px 0">Loading…</p></main>
+
+<script src="../assets/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.1"></script>
+<script>
+(function(){
+  var cfg = window.HL_CONFIG || {}, $ = function(id){ return document.getElementById(id); };
+  var sb = window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, flowType: "implicit", storageKey: "hl-admin-auth" } });
+  var days = 30, session = null;
+  try { var d0 = +localStorage.getItem("hl-admin-days"); if ([7,30,90,365].indexOf(d0) >= 0) days = d0; } catch (e) {}
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return { "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]; }); }
+  var nf = new Intl.NumberFormat("en-US");
+  function num(v){ return v == null ? "–" : nf.format(v); }
+  function dur(sec){ if (sec == null) return "–"; sec = Math.round(sec); var m = Math.floor(sec / 60), s = sec % 60; return m ? m + "m " + (s < 10 ? "0" : "") + s + "s" : s + "s"; }
+
+  function gate(msg){
+    $("who").innerHTML = "";
+    $("app").innerHTML = '<form class="gate" id="gf"><h1>Studio dashboard</h1><p style="margin:0;color:var(--ink2)">Sign in with your admin email. We\'ll email you a one-time link.</p>' +
+      '<label for="ge" style="font-weight:600;font-size:14px">Email</label><input id="ge" type="email" autocomplete="email" required>' +
+      '<button type="submit" id="gb">Email me a sign-in link</button><p class="msg" id="gm" role="status">' + esc(msg || "") + '</p></form>';
+    $("gf").addEventListener("submit", function(e){
+      e.preventDefault(); var em = $("ge").value.trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) { $("gm").textContent = "Enter a valid email."; return; }
+      $("gb").disabled = true; $("gb").textContent = "Sending…";
+      sb.auth.signInWithOtp({ email: em, options: { emailRedirectTo: location.origin + location.pathname, shouldCreateUser: false } }).then(function(r){
+        if (r.error) throw r.error;
+        $("gf").innerHTML = '<h1>Check your email</h1><p style="margin:0;color:var(--ink2)">Open the link we sent to ' + esc(em) + ' on this device.</p>';
+      }).catch(function(){ $("gb").disabled = false; $("gb").textContent = "Email me a sign-in link"; $("gm").textContent = "Couldn't send the link. Sign in to the game once with this email first, then try again."; });
+    });
+  }
+  function whoBar(){
+    $("who").innerHTML = '<span>' + esc(session.user.email) + '</span><button id="so">Sign out</button>';
+    $("so").onclick = function(){ sb.auth.signOut().then(function(){ location.replace(location.pathname); }); };
+  }
+
+  function lineChart(id, rows, key, unit){
+    var el0 = $(id), W = Math.max(280, Math.round(el0.clientWidth || 560)), H = 200, L = 38, R = 10, T = 10, B = 26, n = rows.length;
+    var vals = rows.map(function(r){ return +r[key] || 0; }), max = Math.max(1, Math.max.apply(null, vals));
+    var step = Math.pow(10, Math.floor(Math.log10(max))), nice = Math.ceil(max / step) * step; if (nice / step > 6) { step *= 2; nice = Math.ceil(max / step) * step; }
+    var X = function(i){ return L + (n < 2 ? (W - L - R) / 2 : i * (W - L - R) / (n - 1)); }, Y = function(v){ return T + (H - T - B) * (1 - v / nice); };
+    var g = "";
+    for (var v = 0; v <= nice + 1e-9; v += step) g += '<line class="gl" x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(v) + '" y2="' + Y(v) + '"/><text class="ax" x="' + (L - 6) + '" y="' + (Y(v) + 4) + '" text-anchor="end">' + nf.format(v) + '</text>';
+    var every = Math.max(1, Math.ceil(n / Math.max(3, Math.floor(W / 90))));
+    rows.forEach(function(r, i){ if (i % every === 0 || i === n - 1) g += '<text class="ax" x="' + X(i) + '" y="' + (H - 6) + '" text-anchor="middle">' + esc(String(r.day).slice(5)) + '</text>'; });
+    var pts = rows.map(function(r, i){ return X(i) + "," + Y(+r[key] || 0); }).join(" ");
+    var area = n ? "M" + X(0) + "," + Y(0) + " L" + pts.split(" ").join(" L") + " L" + X(n - 1) + "," + Y(0) + "Z" : "";
+    var el = $(id);
+    el.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(el.dataset.label) + '">' + g + '<path class="ar" d="' + area + '"/><polyline class="ln" points="' + pts + '"/><line class="xh" y1="' + T + '" y2="' + (H - B) + '" x1="-9" x2="-9"/><circle class="dt" r="5" cx="-20" cy="-20"/><rect x="' + L + '" y="0" width="' + (W - L - R) + '" height="' + H + '" fill="transparent"/></svg><div class="tip"></div>' +
+      '<details class="tv"><summary>Show as table</summary><div class="tw"><table><thead><tr><th>Day (UTC)</th><th class="n">' + esc(el.dataset.label) + '</th></tr></thead><tbody>' + rows.slice().reverse().map(function(r){ return '<tr><td>' + esc(r.day) + '</td><td class="n">' + num(+r[key] || 0) + '</td></tr>'; }).join("") + '</tbody></table></div></details>';
+    var svg = el.querySelector("svg"), xh = svg.querySelector(".xh"), dt = svg.querySelector(".dt"), tip = el.querySelector(".tip");
+    function at(ev){
+      var b = svg.getBoundingClientRect(), x = (ev.clientX - b.left) * W / b.width, i = n < 2 ? 0 : Math.round((x - L) / ((W - L - R) / (n - 1))); i = Math.max(0, Math.min(n - 1, i));
+      var r = rows[i]; if (!r) return;
+      xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); dt.setAttribute("cx", X(i)); dt.setAttribute("cy", Y(+r[key] || 0));
+      el.classList.add("on"); tip.innerHTML = esc(r.day) + ' · <b>' + num(+r[key] || 0) + '</b> ' + esc(unit);
+      tip.style.left = (X(i) * b.width / W + (b.left - el.getBoundingClientRect().left)) + "px"; tip.style.top = (Y(+r[key] || 0) * b.height / H + (b.top - el.getBoundingClientRect().top)) + "px"; tip.style.opacity = 1;
+    }
+    svg.addEventListener("pointermove", at); svg.addEventListener("pointerleave", function(){ tip.style.opacity = 0; el.classList.remove("on"); });
+  }
+  function table(rows, cols){
+    if (!rows || !rows.length) return '<p class="empty">No data yet.</p>';
+    return '<div class="tw"><table><thead><tr>' + cols.map(function(c){ return '<th' + (c.n ? ' class="n"' : '') + '>' + esc(c.h) + '</th>'; }).join("") + '</tr></thead><tbody>' +
+      rows.map(function(r){ return '<tr>' + cols.map(function(c){ var v = r[c.k]; return '<td' + (c.n ? ' class="n"' : '') + '>' + esc(c.f ? c.f(v, r) : v == null ? "–" : v) + '</td>'; }).join("") + '</tr>'; }).join("") + '</tbody></table></div>';
+  }
+  var WORLD = { maple: "Maple Street School", junior: "Junior Casebook", camp: "Camp Pinecrest", westbrook: "Westbrook High", fantasy: "Fantasy Kingdom", noir: "Classic Noir", manor: "Victorian Manor", nightly: "Nightly case" };
+
+  function render(d){
+    var t = d.totals, ix = d.daily || [];
+    var tile = function(k, v, s){ return '<div class="tile"><div class="k">' + esc(k) + '</div><div class="v">' + v + '</div>' + (s ? '<div class="s">' + esc(s) + '</div>' : "") + '</div>'; };
+    $("app").innerHTML =
+      '<div class="head"><div><h1>How Hushlantern is doing</h1><p>Last ' + days + ' days · updated ' + new Date().toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }) + '</p></div>' +
+      '<div class="range" role="group" aria-label="Date range">' + [7,30,90,365].map(function(n){ return '<button data-d="' + n + '" aria-pressed="' + (n === days) + '">' + (n === 365 ? "12 months" : n + " days") + '</button>'; }).join("") + '</div></div>' +
+      '<div class="sec"><h2>Website</h2><div class="tiles">' +
+        tile("Visits", num(t.site_sessions), "browser sessions") + tile("Page views", num(t.page_views)) +
+        tile("Avg. time on site", dur(t.avg_site_seconds), "per visit") + tile("Waitlist", num(t.waitlist_total), "+" + num(t.waitlist_new) + " in this period") + '</div></div>' +
+      '<div class="sec"><h2>Game</h2><div class="tiles">' +
+        tile("Sign-ins", num(t.sign_ins), num(t.new_families) + " new families") + tile("Active families", num(t.active_families), num(t.active_players) + " players") +
+        tile("Avg. play time", t.avg_game_minutes == null ? "–" : t.avg_game_minutes + " min", "per session · " + num(t.play_hours) + " h total") + tile("Cases solved", num(t.cases_solved), num(t.guest_sessions) + " guest sessions") + '</div></div>' +
+      '<div class="sec"><h2>Trends</h2><div class="charts">' +
+        '<div class="card"><h3>Website visits</h3><p class="sub">Sessions per day</p><div class="chart" id="c1" data-label="Website visits"></div></div>' +
+        '<div class="card"><h3>Sign-ins</h3><p class="sub">Game sign-ins per day</p><div class="chart" id="c2" data-label="Sign-ins"></div></div>' +
+        '<div class="card"><h3>Active families</h3><p class="sub">Signed-in families who played that day</p><div class="chart" id="c3" data-label="Active families"></div></div>' +
+        '<div class="card"><h3>Time played</h3><p class="sub">Minutes of play per day, all players</p><div class="chart" id="c4" data-label="Minutes played"></div></div>' +
+      '</div></div>' +
+      '<div class="sec"><h2>Cases by world</h2><div class="card">' + table((d.worlds || []).map(function(w){ return Object.assign({}, w, { name: WORLD[w.world] || w.world, rate: w.opened ? Math.round(100 * w.solved / w.opened) + "%" : "–" }); }),
+        [{ h: "World", k: "name" }, { h: "Opened", k: "opened", n: 1, f: num }, { h: "Solved", k: "solved", n: 1, f: num }, { h: "Solve rate", k: "rate", n: 1 }, { h: "Wrong guesses / solve", k: "avg_wrong", n: 1 }, { h: "Minutes to solve", k: "avg_minutes", n: 1 }]) + '</div></div>' +
+      '<div class="sec grid2">' +
+        '<div><h2>Top pages</h2><div class="card">' + table(d.pages, [{ h: "Page", k: "page" }, { h: "Views", k: "views", n: 1, f: num }, { h: "Avg. time", k: "avg_seconds", n: 1, f: dur }]) + '</div></div>' +
+        '<div><h2>Where visitors came from</h2><div class="card">' + table(d.referrers, [{ h: "Source", k: "ref" }, { h: "Visits", k: "sessions", n: 1, f: num }]) + '</div></div>' +
+        '<div><h2>Players by age group</h2><div class="card">' + table(d.age_bands, [{ h: "Age group", k: "band" }, { h: "Players", k: "players", n: 1, f: num }]) + '</div></div>' +
+        '<div><h2>Devices</h2><div class="card">' + table(d.devices, [{ h: "Device", k: "device" }, { h: "Where", k: "app", f: function(v){ return v === "site" ? "Website" : v === "game" ? "Game" : v; } }, { h: "Sessions", k: "sessions", n: 1, f: num }]) + '</div></div>' +
+        '<div><h2>Game languages</h2><div class="card">' + table(d.languages, [{ h: "Language", k: "lang", f: function(v){ return { en: "English", es: "Español", fr: "Français", hi: "हिन्दी" }[v] || v; } }, { h: "Sessions", k: "sessions", n: 1, f: num }]) + '</div></div>' +
+        '<div><h2>Waitlist by country</h2><div class="card">' + table(d.regions, [{ h: "Country", k: "region", f: function(v){ return { US: "United States", CA: "Canada", other: "Elsewhere" }[v] || v; } }, { h: "Sign-ups", k: "signups", n: 1, f: num }]) + '</div></div>' +
+      '</div><p class="foot">Days are counted in UTC. Visits are browser sessions (no cookies are used, so one person on two devices counts twice). Players appear only as random IDs and age groups.</p>';
+    lineChart("c1", ix, "site_sessions", "visits"); lineChart("c2", ix, "sign_ins", "sign-ins"); lineChart("c3", ix, "active_families", "families"); lineChart("c4", ix, "play_minutes", "minutes");
+    document.querySelectorAll("[data-d]").forEach(function(b){ b.onclick = function(){ days = +b.dataset.d; try { localStorage.setItem("hl-admin-days", days); } catch (e) {} load(); }; });
+  }
+  function load(){
+    sb.rpc("analytics_summary", { days: days }).then(function(r){
+      if (r.error) { if (/not_admin/.test(r.error.message || "")) { $("app").innerHTML = '<div class="gate"><h1>No access</h1><p style="margin:0;color:var(--ink2)">' + esc(session.user.email) + ' isn\'t on the admin list. Add it to the <code>admins</code> table in Supabase, then reload.</p></div>'; return; } throw r.error; }
+      render(r.data);
+    }).catch(function(e){ $("app").innerHTML = '<div class="gate"><h1>Couldn\'t load</h1><p class="msg">' + esc(e && e.message || e) + '</p></div>'; });
+  }
+  sb.auth.getSession().then(function(r){
+    session = r.data && r.data.session;
+    if (/access_token=|error=/.test(location.hash)) history.replaceState(null, "", location.pathname);
+    if (!session) { gate(""); return; }
+    whoBar(); load();
+  });
+})();
+</script>
+</body>
+</html>

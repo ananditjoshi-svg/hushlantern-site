@@ -74,10 +74,11 @@
         <h2 id="acct-h">Your child plays under a nickname. You hold the keys.</h2>
       </div>
       <ul class="ticks">
+        <li>A parent or guardian signs in with their email. We send a one-time sign-in link, so there's no password to remember.</li>
         <li>Kids pick a fun nickname like "Brave Owl". We never ask a child for their real name, email, photo or address.</li>
-        <li>Players under 13 (or the age set by local law where you live) need a parent to set things up. The parent adds their email and a 4-digit parent PIN.</li>
+        <li>Players under 13 (or the age set by local law where you live) can only be added by a signed-in parent, who also sets a 4-digit parent PIN.</li>
         <li>Parent settings sit behind the PIN: allow or block playing with friends, limit your child to younger cases, and add or remove profiles. A child can't switch from their profile to a grown-up one without it.</li>
-        <li>Parent emails are encrypted before they are stored. The PIN itself is never stored.</li>
+        <li>Accounts are stored securely with our database provider, which encrypts data at rest. The PIN itself is never stored, only a scrambled check value.</li>
         <li>At launch, parent permission will be verified through an established kids' consent service.</li>
       </ul>
     </div>
@@ -113,7 +114,8 @@
     </div>
     <details><summary>Is it really free?</summary><p>Yes. No ads, no purchases and no subscriptions. We'll tell you clearly before that ever changes.</p></details>
     <details><summary>Can my child talk to strangers?</summary><p>No. There's no chat of any kind. Group play only works with a private table code that the host shares, and players appear by nickname only.</p></details>
-    <details><summary>What information do you keep about my child?</summary><p>A nickname, the month and year of birth (to pick age-right cases), region and language settings, and game progress such as solved cases and points. For players under 13, the parent's email is stored encrypted. We don't collect a child's name, email, photos, location or contacts.</p></details>
+    <details><summary>What information do you keep about my child?</summary><p>A nickname, the month and year of birth (to pick age-right cases), region and language settings, and game progress such as solved cases and points. To improve the game we also count things like cases solved and time played, tagged with a random player ID and an age group, never the nickname. We don't collect a child's name, email, photos, location or contacts, and we never use any of it for ads. The <a href="privacy.html">privacy notice</a> has the details.</p></details>
+    <details><summary>Can my child play without an account?</summary><p>Yes. Choose "Play as a guest" and progress stays on that device only. Signing in saves progress across devices and lets parents turn on playing with friends.</p></details>
     <details><summary>Can my child use it at school?</summary><p>Yes. It runs in any modern browser, on Chromebooks, tablets and computers, with nothing to install. Teachers can join the waitlist with "My class" and we'll be in touch about classroom use.</p></details>
     <details><summary>How do I delete my child's profile?</summary><p>Open the profile menu, choose Parent settings, enter your PIN and remove the profile. You can also email <a href="mailto:hello@hushlantern.com">hello@hushlantern.com</a> and we'll delete it for you.</p></details>
   </section>
@@ -136,5 +138,7 @@
     </nav>
   </div>
 </footer>
+<script src="assets/config.js"></script>
+<script src="assets/hl-analytics.js" data-autostart="site"></script>
 </body>
 </html>
