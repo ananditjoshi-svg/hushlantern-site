@@ -24,7 +24,7 @@ supabase/game.sql       database setup for the game, analytics and dashboard (ru
    - Redirect URLs: add `https://hushlantern.com/play/` and `https://hushlantern.com/admin/`
 3. **Authentication → Emails → SMTP Settings: set up your own email sender before inviting families.** Supabase's built-in sender only delivers to your own team's addresses and only a few emails an hour. A free Resend account (resend.com) works well: verify hushlantern.com there (it gives you DNS records to add in GoDaddy), then paste its SMTP details here with sender `hello@hushlantern.com`.
 4. Optional but recommended: **Database → Extensions →** enable `pg_cron`, then in the SQL Editor run
-   `select cron.schedule('purge-old-events', '15 4 * * *', 'select public.purge_old_events()');`
+   `select cron.schedule('purge-old-events', '15 4 * * *', 'select hl.purge_old_events()');`
    so measurement records older than 13 months and finished multiplayer tables are deleted automatically, as the privacy notice promises.
 
 The dashboard is at **hushlantern.com/admin**: sign in to the game once with your admin email, then use the same email there.
