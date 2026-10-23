@@ -233,7 +233,7 @@ begin
       'site_sessions',      (select count(distinct session_id) from ev where app='site'),
       'page_views',         (select count(*) from ev where app='site' and kind='page_view'),
       'avg_site_seconds',   (select round(avg(ms)/1000.0) from site_s where ms > 0),
-      'sign_ins',           (select count(*) from ev where app='game' and kind='sign_in'),
+      'sign_ins',           (select count(*) from ev where app='game' and kind in ('sign_in','sign_up')),
       'new_families',       (select count(*) from ev where app='game' and kind='sign_up'),
       'active_families',    (select count(distinct user_id) from ev where app='game' and user_id is not null),
       'active_players',     (select count(distinct profile_ref) from ev where app='game' and profile_ref is not null),
@@ -249,7 +249,7 @@ begin
         'day', d,
         'site_sessions',   (select count(distinct session_id) from ev where app='site' and at::date = d),
         'game_sessions',   (select count(distinct session_id) from ev where app='game' and at::date = d),
-        'sign_ins',        (select count(*) from ev where app='game' and kind='sign_in' and at::date = d),
+        'sign_ins',        (select count(*) from ev where app='game' and kind in ('sign_in','sign_up') and at::date = d),
         'active_families', (select count(distinct user_id) from ev where app='game' and at::date = d and user_id is not null),
         'play_minutes',    (select round(coalesce(sum(dur_ms),0)/60000.0) from ev where app='game' and kind='time' and at::date = d),
         'site_minutes',    (select round(coalesce(sum(dur_ms),0)/60000.0) from ev where app='site' and kind='time' and at::date = d)
